@@ -1,86 +1,54 @@
-# Sinema Kayıt Sistemi
+# Öğrenci ve Öğretim Görevlisi Yönetim Sistemi
 
-![Java](https://img.shields.io/badge/Java-17-orange.svg)
-![Maven](https://img.shields.io/badge/Maven-3.8.5-blue.svg)
-![Gson](https://img.shields.io/badge/Gson-2.9.0-green.svg)
+## 📚 Proje Açıklaması
 
-## Proje Açıklaması
+Sinema Kayıt Sistemi, sinema salonları, filmler ve müşteriler arasında etkileşim sağlayan basit bir Java tabanlı uygulamadır. Bu sistem, salon yönetimi, bilet satışı ve müşteri kayıt işlemlerini kolaylaştırmak için tasarlanmıştır. Uygulama, JSON dosyaları aracılığıyla verileri depolar ve yönetir, böylece veritabanı gereksinimini ortadan kaldırır.
 
-Sinema Kayıt Sistemi, sinema salonları, filmler ve müşterilerle ilgili temel kayıt işlemlerini gerçekleştiren konsol tabanlı bir Java uygulamasıdır. Bu sistem, kullanıcıya çeşitli işlemler yapma imkanı sunar ve verileri JSON dosyalarında saklayarak kalıcı depolama sağlar.
+## 🚀 Özellikler
 
-## Özellikler
+- **Müşteri Yönetimi:** Yeni müşteriler ekleyebilir, mevcut müşterileri listeleyebilir ve müşterilerin bilgilerini görüntüleyebilirsiniz.
+- **Film Yönetimi:** Yeni filmler ekleyebilir, mevcut filmleri listeleyebilir ve film detaylarını görüntüleyebilirsiniz.
+- **Salon Yönetimi:** Yeni salonlar ekleyebilir, mevcut salonları listeleyebilir ve salonlarda gösterilen filmleri görüntüleyebilirsiniz.
+- **Bilet Satışı:** Müşterileri salonlara ekleyerek bilet satışı yapabilirsiniz.
+- **Veri Saklama:** Tüm veriler JSON dosyalarında saklanır, böylece verilerinizi kolayca yedekleyebilir ve yönetebilirsiniz.
 
-- **Müşteri Yönetimi:** Yeni müşteriler ekleyebilir, mevcut müşterileri listeleyebilirsiniz.
-- **Film Yönetimi:** Yeni filmler ekleyebilir, mevcut filmleri listeleyebilirsiniz.
-- **Salon Yönetimi:** Yeni salonlar ekleyebilir, mevcut salonları listeleyebilirsiniz.
-- **Bilet Satışı:** Müşterileri salonlara kaydedebilir ve salonlardaki müşterileri görüntüleyebilirsiniz.
-- **Veri Saklama:** Tüm veriler JSON dosyalarında saklanır ve uygulama yeniden başlatıldığında veriler geri yüklenir.
-
-## Kullanılan Teknolojiler
+## 🛠 Teknolojiler
 
 - **Java 17:** Uygulamanın temel programlama dili.
 - **Maven:** Proje yönetimi ve bağımlılık yönetimi için.
-- **Gson:** JSON verilerini işlemek için kullanılan kütüphane.
+- **Gson:** JSON verilerini işlemek için.
 
-## Kurulum
+## 📦 Kurulum
 
-### Gereksinimler
+### 1. Gereksinimler
 
-- **Java JDK 17:** [İndirmek için tıklayın](https://www.oracle.com/java/technologies/javase-jdk17-downloads.html)
-- **Maven:** [İndirmek için tıklayın](https://maven.apache.org/download.cgi)
-- **Git:** [İndirmek için tıklayın](https://git-scm.com/downloads)
+- [Java JDK 17]([https://dotnet.microsoft.com/download](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)) (versiyon 17)
+- [Maven]([https://dotnet.microsoft.com/download](https://maven.apache.org/install.html)) ()
 
-### Adımlar
+### 2. Projeyi Klonlama
 
-1. **Depoyu Klonlayın**
-
-   ```bash
-   git clone https://github.com/kullanici_adiniz/sinema_odev.git
-   cd sinema_odev
+```bash
+git clone https://github.com/kullanici-adiniz/sinema_odev.git
+cd sinema_odev
 ```
 
-### Kullanım
-Uygulamayı çalıştırdığınızda aşağıdaki menü ile karşılaşacaksınız:
+## Kullanım
 
-```
-=== SİNEMA KAYIT SİSTEMİ ===
-1 - Yeni Müşteri Ekle
-2 - Yeni Film Ekle
-3 - Yeni Salon Ekle
-4 - Salona Müşteri Kaydı Yap (Bilet Satışı)
-5 - Tüm Müşterileri Listele
-6 - Tüm Filmleri Listele
-7 - Tüm Salonları Listele
-8 - Bir Salonun Müşterilerini Listele
-9 - Çıkış
-Seçiminiz:
-```
+Uygulama başlatıldığında, aşağıdaki menü seçeneklerini göreceksiniz:
 
-Her bir seçenek, ilgili işlemi gerçekleştirmek için sizi yönlendirecektir. Örneğin, "1 - Yeni Müşteri Ekle" seçeneğini seçerek yeni bir müşteri ekleyebilirsiniz.
+Yeni Müşteri Ekle:
 
-### Proje Yapısı
+Müşteri adı ve email adresi girilir.
+Müşteri verisi JSON dosyasına kaydedilir.
+Yeni Film Ekle:
 
-```
-sinema_odev/
-├── pom.xml
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   └── com/
-│   │   │       └── sinema/
-│   │   │           ├── entity/
-│   │   │           │   ├── BaseEntity.java
-│   │   │           │   ├── Film.java
-│   │   │           │   ├── Musteri.java
-│   │   │           │   └── Salon.java
-│   │   │           ├── interfaces/
-│   │   │           │   └── IKayit.java
-│   │   │           ├── service/
-│   │   │           │   └── JsonDatabaseService.java
-│   │   │           └── Main.java
-│   │   └── resources/
-│   └── test/
+Film adı, türü ve süresi girilir.
+Film verisi JSON dosyasına kaydedilir.
+Yeni Salon Ekle:
 
+Salon adı ve gösterilecek film seçilir.
+Salon verisi JSON dosyasına kaydedilir.
+Bilet Satışı:
 
-
-
+Salon ve müşteri seçilerek müşteriler salona eklenir.
+Güncellenen salon verisi JSON dosyasına kaydedilir.
