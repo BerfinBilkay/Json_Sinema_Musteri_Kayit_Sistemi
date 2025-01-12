@@ -36,22 +36,22 @@ cd sinema_odev
 
 Uygulama başlatıldığında, aşağıdaki menü seçeneklerini göreceksiniz:
 
-##Yeni Müşteri Ekle:
+###Yeni Müşteri Ekle:
 
 Müşteri adı ve email adresi girilir.
 Müşteri verisi JSON dosyasına kaydedilir.
 
-##Yeni Film Ekle:
+###Yeni Film Ekle:
 
 Film adı, türü ve süresi girilir.
 Film verisi JSON dosyasına kaydedilir.
 
-##Yeni Salon Ekle:
+###Yeni Salon Ekle:
 
 Salon adı ve gösterilecek film seçilir.
 Salon verisi JSON dosyasına kaydedilir.
 
-##Bilet Satışı:
+###Bilet Satışı:
 
 Salon ve müşteri seçilerek müşteriler salona eklenir.
 Güncellenen salon verisi JSON dosyasına kaydedilir.
